@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1478300491526" org.eventb.texttools.text_representation="context ZoberContext&#10;&#10;end&#10;" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="clients"/>
+<org.eventb.core.carrierSet name=")" org.eventb.core.identifier="drivers"/>
+<org.eventb.core.carrierSet name="*" org.eventb.core.identifier="cars"/>
+<org.eventb.core.carrierSet name="+" org.eventb.core.identifier="name"/>
+<org.eventb.core.carrierSet name="," org.eventb.core.identifier="rides"/>
+<org.eventb.core.carrierSet name="-" org.eventb.core.identifier="email"/>
+<org.eventb.core.carrierSet name="(" org.eventb.core.identifier="licenses"/>
+<org.eventb.core.carrierSet name="." org.eventb.core.identifier="zoberservice"/>
+<org.eventb.core.carrierSet name="/" org.eventb.core.identifier="plan"/>
+<org.eventb.core.constant name="0" org.eventb.core.identifier="PLAN_VIP"/>
+<org.eventb.core.constant name="1" org.eventb.core.identifier="PLAN_REGULAR"/>
+<org.eventb.core.constant name="2" org.eventb.core.identifier="SERVICE_ZOBERY"/>
+<org.eventb.core.constant name="3" org.eventb.core.identifier="SERVICE_ZOBERWHITE"/>
+<org.eventb.core.axiom name="4" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(zoberservice,{SERVICE_ZOBERY},{SERVICE_ZOBERWHITE})"/>
+<org.eventb.core.axiom name="5" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(plan,{PLAN_VIP},{PLAN_REGULAR})"/>
+</org.eventb.core.contextFile>
