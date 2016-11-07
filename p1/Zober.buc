@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="CLIENTS"/>
+<org.eventb.core.carrierSet name="(" org.eventb.core.identifier="DRIVERS"/>
+<org.eventb.core.carrierSet name=")" org.eventb.core.identifier="CARS"/>
+<org.eventb.core.carrierSet name="*" org.eventb.core.identifier="NAMES"/>
+<org.eventb.core.carrierSet name="+" org.eventb.core.identifier="RIDES"/>
+<org.eventb.core.carrierSet name="," org.eventb.core.identifier="EMAILS"/>
+<org.eventb.core.carrierSet name="-" org.eventb.core.identifier="LICENSES"/>
+<org.eventb.core.axiom name="." org.eventb.core.label="axm1" org.eventb.core.predicate="partition(ZOBERSERVICE, {ZOBER_Y}, {ZOBER_WHITE})"/>
+<org.eventb.core.carrierSet name="/" org.eventb.core.identifier="ZOBERSERVICE"/>
+<org.eventb.core.carrierSet name="0" org.eventb.core.identifier="PLAN"/>
+<org.eventb.core.constant name="1" org.eventb.core.identifier="ZOBER_Y"/>
+<org.eventb.core.constant name="2" org.eventb.core.identifier="ZOBER_WHITE"/>
+<org.eventb.core.constant name="3" org.eventb.core.identifier="REGULAR"/>
+<org.eventb.core.constant name="4" org.eventb.core.identifier="VIP"/>
+<org.eventb.core.axiom name="5" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(PLAN, {REGULAR}, {VIP})"/>
+</org.eventb.core.contextFile>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="CARS" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.poIdentifier name="LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.poIdentifier name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.poIdentifier name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.poIdentifier name="RIDES" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.poIdentifier name="VIP" org.eventb.core.type="PLAN"/>
+<org.eventb.core.poIdentifier name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.poIdentifier name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.poPredicate name="ZOBERSERVICF" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="ZOBERSERVICG" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.axiom#5"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/p1/Drivers.bpo|org.eventb.core.poFile#Drivers|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="drivers_licenses" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
+<org.eventb.core.poIdentifier name="drivers_names" org.eventb.core.type="ℙ(DRIVERS×NAMES)"/>
+<org.eventb.core.poIdentifier name="zober_drivers" org.eventb.core.type="ℙ(DRIVERS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/p1/Drivers.bpo|org.eventb.core.poFile#Drivers|org.eventb.core.poPredicateSet#EVTALLHYPdrivers_licenset"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(DRIVERS×NAMES))∈(∅ ⦂ ℙ(DRIVERS)) → NAMES" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/p1/Drivers.bpo|org.eventb.core.poFile#Drivers|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/p1/Drivers.bpo|org.eventb.core.poFile#Drivers|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/p1/Drivers.bpo|org.eventb.core.poFile#Drivers|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/p1/Drivers.bpo|org.eventb.core.poFile#Drivers|org.eventb.core.poPredicateSet#EVTALLHYPdrivers_licenset"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(DRIVERS×LICENSES))∈(∅ ⦂ ℙ(DRIVERS)) → LICENSES" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/p1/Drivers.bpo|org.eventb.core.poFile#Drivers|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/p1/Drivers.bpo|org.eventb.core.poFile#Drivers|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/p1/Drivers.bpo|org.eventb.core.poFile#Drivers|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licenset" org.eventb.core.parentSet="/p1/Drivers.bpo|org.eventb.core.poFile#Drivers|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="drivers_licenses'" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
+<org.eventb.core.poIdentifier name="drivers_names'" org.eventb.core.type="ℙ(DRIVERS×NAMES)"/>
+<org.eventb.core.poIdentifier name="zober_drivers'" org.eventb.core.type="ℙ(DRIVERS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licenset" org.eventb.core.parentSet="/p1/Drivers.bpo|org.eventb.core.poFile#Drivers|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licenset" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/p1/Drivers.bpo|org.eventb.core.poFile#Drivers|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="zober_drivers⊆DRIVERS" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="drivers_names∈zober_drivers → NAMES" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="drivers_licenses∈zober_drivers → LICENSES" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#."/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

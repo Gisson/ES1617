@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="zober_drivers ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="drivers_names ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="drivers_licenses ≔ ∅" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Zober"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=")" org.eventb.core.identifier="zober_drivers"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="+" org.eventb.core.identifier="drivers_names"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="drivers_licenses"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="zober_drivers ⊆ DRIVERS"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="drivers_names ∈ zober_drivers → NAMES"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="drivers_licenses ∈ zober_drivers → LICENSES"/>
+</org.eventb.core.machineFile>

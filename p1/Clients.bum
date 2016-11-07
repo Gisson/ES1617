@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="zober_clients ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="client_names ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="client_emails ≔ ∅" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="client_plans ≔ ∅" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Zober"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="zober_clients"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="client_names"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="client_emails"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="zober_clients ⊆ CLIENTS"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="client_names ∈ zober_clients → NAMES"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="client_emails ∈ zober_clients → EMAILS"/>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="newClient">
+<org.eventb.core.guard name="'" org.eventb.core.label="is_new" org.eventb.core.predicate="&#9;client ∈ CLIENTS ∖ zober_clients"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="client"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="name"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="email"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="is_name" org.eventb.core.predicate="name ∈ NAMES" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="," org.eventb.core.label="is_email" org.eventb.core.predicate="email ∈ EMAILS"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="zober_clients ≔ zober_clients ∪ {client}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="client_names ≔ client_names ∪ {client ↦ name}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="client_emails ≔ client_emails ∪ {client ↦ email}" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="client_plans ≔ client_plans ∪ {client ↦ REGULAR}" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="removeClient">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="client"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="client_exists" org.eventb.core.predicate="client ∈ zober_clients"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="zober_clients ≔ zober_clients ∖ {client}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="client_names ≔ {client} ⩤ client_names" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="client_emails ≔ {client} ⩤ client_emails" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="client_plans ≔ {client} ⩤ client_plans" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="1" org.eventb.core.identifier="client_plans"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv4" org.eventb.core.predicate="client_plans ∈ zober_clients → PLAN"/>
+</org.eventb.core.machineFile>
