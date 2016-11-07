@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase">
+<org.eventb.core.scRefinesMachine name="'" org.eventb.core.scTarget="/p1/Drivers.bcm" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.refinesMachine#)"/>
+<org.eventb.core.scSeesContext name="(" org.eventb.core.scTarget="/p1/Zober.bcc" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.seesContext#("/>
+<org.eventb.core.scInternalContext name="Zober">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.axiom#." org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.axiom#5" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="CARS" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.scCarrierSet name="CLIENTS" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.scCarrierSet name="DRIVERS" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.scCarrierSet name="EMAILS" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.carrierSet#," org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.scCarrierSet name="LICENSES" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.carrierSet#-" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.scCarrierSet name="NAMES" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.carrierSet#*" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.scCarrierSet name="PLAN" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.carrierSet#0" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.scConstant name="REGULAR" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.constant#3" org.eventb.core.type="PLAN"/>
+<org.eventb.core.scCarrierSet name="RIDES" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.carrierSet#+" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.scConstant name="VIP" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.constant#4" org.eventb.core.type="PLAN"/>
+<org.eventb.core.scCarrierSet name="ZOBERSERVICE" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.carrierSet#\/" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.scConstant name="ZOBER_WHITE" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.constant#2" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.scConstant name="ZOBER_Y" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.constant#1" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="Zobes" org.eventb.core.label="inv1" org.eventb.core.predicate="zober_drivers⊆DRIVERS" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="Zobet" org.eventb.core.label="inv2" org.eventb.core.predicate="drivers_names∈zober_drivers → NAMES" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#-" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="Zobeu" org.eventb.core.label="inv3" org.eventb.core.predicate="drivers_licenses∈zober_drivers ↣ LICENSES" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#." org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="Zobev" org.eventb.core.label="inv1" org.eventb.core.predicate="zober_cars⊆CARS" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#-" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="Zobew" org.eventb.core.label="inv2" org.eventb.core.predicate="car_owners∈zober_cars ↔ zober_drivers" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#." org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="Zobex" org.eventb.core.label="inv3" org.eventb.core.predicate="car_drivers∈zober_cars ↔ zober_drivers" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#\/" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="Zobey" org.eventb.core.label="inv4" org.eventb.core.predicate="∀x⦂DRIVERS·x∈ran(car_owners)⇒dom(car_owners ▷ {x})⊆dom(car_drivers ▷ {x})" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#0" org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable de.prob.units.unitPragmaAttribute="" name="car_drivers" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.variable#," org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.scVariable de.prob.units.unitPragmaAttribute="" name="car_owners" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.variable#+" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.scVariable name="drivers_licenses" org.eventb.core.abstract="true" org.eventb.core.concrete="false" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.variable#*" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
+<org.eventb.core.scVariable name="drivers_names" org.eventb.core.abstract="true" org.eventb.core.concrete="false" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.variable#+" org.eventb.core.type="ℙ(DRIVERS×NAMES)"/>
+<org.eventb.core.scVariable de.prob.units.unitPragmaAttribute="" name="zober_cars" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.variable#*" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.scVariable name="zober_drivers" org.eventb.core.abstract="true" org.eventb.core.concrete="false" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.variable#)" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.scEvent name="drivers_licenset" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#'">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/p1/Drivers.bcm|org.eventb.core.scMachineFile#Drivers|org.eventb.core.scEvent#drivers_licenset" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#'"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="car_drivers,car_owners,zober_cars :∣ ⊤" org.eventb.core.label="GEN" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#'"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

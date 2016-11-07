@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Zober"/>
+<org.eventb.core.refinesMachine name=")" org.eventb.core.target="Drivers"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="zober_cars"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="+" org.eventb.core.identifier="car_owners"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="," org.eventb.core.identifier="car_drivers"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv1" org.eventb.core.predicate="zober_cars ⊆ CARS"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv2" org.eventb.core.predicate="car_owners ∈ zober_cars ↔ zober_drivers"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv3" org.eventb.core.predicate="car_drivers ∈ zober_cars ↔ zober_drivers"/>
+<org.eventb.core.invariant name="0" org.eventb.core.label="inv4" org.eventb.core.predicate="∀ x · x ∈ ran(car_owners) ⇒ dom(car_owners ▷ {x}) ⊆ dom(car_drivers ▷ {x})   "/>
+</org.eventb.core.machineFile>

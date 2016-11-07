@@ -11,7 +11,7 @@
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="drivers_licenses"/>
 <org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="zober_drivers ⊆ DRIVERS"/>
 <org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="drivers_names ∈ zober_drivers → NAMES"/>
-<org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="drivers_licenses ∈ zober_drivers → LICENSES"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="drivers_licenses ∈ zober_drivers ↣ LICENSES"/>
 <org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="newDriver">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="driver"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="name"/>

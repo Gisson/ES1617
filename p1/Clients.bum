@@ -12,7 +12,7 @@
 <org.eventb.core.variable name="+" org.eventb.core.identifier="client_emails"/>
 <org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="zober_clients ⊆ CLIENTS"/>
 <org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="client_names ∈ zober_clients → NAMES"/>
-<org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="client_emails ∈ zober_clients → EMAILS"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="client_emails ∈ zober_clients ↣ EMAILS"/>
 <org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="newClient">
 <org.eventb.core.guard name="'" org.eventb.core.label="is_new" org.eventb.core.predicate="&#9;client ∈ CLIENTS ∖ zober_clients"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="client"/>
