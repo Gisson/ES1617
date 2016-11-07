@@ -12,4 +12,16 @@
 <org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="zober_drivers ⊆ DRIVERS"/>
 <org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="drivers_names ∈ zober_drivers → NAMES"/>
 <org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="drivers_licenses ∈ zober_drivers → LICENSES"/>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="newDriver">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="driver"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="name"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="license"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="is_new" org.eventb.core.predicate="&#9;driver ∈ DRIVERS ∧ driver ∉ zober_drivers"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="is_name" org.eventb.core.predicate="name ∈ NAMES"/>
+<org.eventb.core.guard name="," org.eventb.core.label="is_license" org.eventb.core.predicate="license ∈ LICENSES"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="is_unique" org.eventb.core.predicate="license ∉ ran(drivers_licenses)"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="zober_drivers ≔ zober_drivers ∪ {driver}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="drivers_names ≔ drivers_names ∪ {driver ↦ name}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="drivers_licenses ≔ drivers_licenses ∪ {driver ↦ license}" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
 </org.eventb.core.machineFile>
