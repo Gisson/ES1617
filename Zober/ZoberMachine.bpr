@@ -380,12 +380,13 @@
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8,p9,p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12,p13"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -406,49 +407,77 @@
 <org.eventb.core.prIdent name="SERVICE_ZOBERY" org.eventb.core.type="zoberservice"/>
 <org.eventb.core.prIdent name="zoberservice" org.eventb.core.type="ℙ(zoberservice)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬newEmail∈ran(registered_email)">
-<org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
-<org.eventb.core.prIdent name="email" org.eventb.core.type="ℙ(email)"/>
-<org.eventb.core.prIdent name="newEmail" org.eventb.core.type="email"/>
-<org.eventb.core.prIdent name="registered_email" org.eventb.core.type="ℙ(clients×email)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="newClient∈clients">
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="newClient∈clients">
 <org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
 <org.eventb.core.prIdent name="newClient" org.eventb.core.type="clients"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬PLAN_VIP=PLAN_REGULAR">
-<org.eventb.core.prIdent name="PLAN_REGULAR" org.eventb.core.type="plan"/>
-<org.eventb.core.prIdent name="PLAN_VIP" org.eventb.core.type="plan"/>
-<org.eventb.core.prIdent name="plan" org.eventb.core.type="ℙ(plan)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="newEmail∈email∧newEmail∉ran(registered_email)">
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬newEmail∈ran(registered_email)">
 <org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
 <org.eventb.core.prIdent name="email" org.eventb.core.type="ℙ(email)"/>
 <org.eventb.core.prIdent name="newEmail" org.eventb.core.type="email"/>
 <org.eventb.core.prIdent name="registered_email" org.eventb.core.type="ℙ(clients×email)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="zoberservice={SERVICE_ZOBERY,SERVICE_ZOBERWHITE}">
-<org.eventb.core.prIdent name="SERVICE_ZOBERWHITE" org.eventb.core.type="zoberservice"/>
-<org.eventb.core.prIdent name="SERVICE_ZOBERY" org.eventb.core.type="zoberservice"/>
-<org.eventb.core.prIdent name="zoberservice" org.eventb.core.type="ℙ(zoberservice)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="newEmail∈email">
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="newEmail∈email∧newEmail∉ran(registered_email)">
+<org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
 <org.eventb.core.prIdent name="email" org.eventb.core.type="ℙ(email)"/>
 <org.eventb.core.prIdent name="newEmail" org.eventb.core.type="email"/>
+<org.eventb.core.prIdent name="registered_email" org.eventb.core.type="ℙ(clients×email)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="newName∈name">
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="newClient∈clients∧newClient∉dom(registered_email)∧newClient∉dom(registered_name)∧newClient∉dom(registered_plan)">
+<org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
+<org.eventb.core.prIdent name="email" org.eventb.core.type="ℙ(email)"/>
 <org.eventb.core.prIdent name="name" org.eventb.core.type="ℙ(name)"/>
-<org.eventb.core.prIdent name="newName" org.eventb.core.type="name"/>
+<org.eventb.core.prIdent name="newClient" org.eventb.core.type="clients"/>
+<org.eventb.core.prIdent name="plan" org.eventb.core.type="ℙ(plan)"/>
+<org.eventb.core.prIdent name="registered_email" org.eventb.core.type="ℙ(clients×email)"/>
+<org.eventb.core.prIdent name="registered_name" org.eventb.core.type="ℙ(clients×name)"/>
+<org.eventb.core.prIdent name="registered_plan" org.eventb.core.type="ℙ(clients×plan)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="newEmail∈email">
+<org.eventb.core.prIdent name="email" org.eventb.core.type="ℙ(email)"/>
+<org.eventb.core.prIdent name="newEmail" org.eventb.core.type="email"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(plan,{PLAN_VIP},{PLAN_REGULAR})">
 <org.eventb.core.prIdent name="PLAN_REGULAR" org.eventb.core.type="plan"/>
 <org.eventb.core.prIdent name="PLAN_VIP" org.eventb.core.type="plan"/>
 <org.eventb.core.prIdent name="plan" org.eventb.core.type="ℙ(plan)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬newClient∈dom(registered_name)">
+<org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
+<org.eventb.core.prIdent name="name" org.eventb.core.type="ℙ(name)"/>
+<org.eventb.core.prIdent name="newClient" org.eventb.core.type="clients"/>
+<org.eventb.core.prIdent name="registered_name" org.eventb.core.type="ℙ(clients×name)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬PLAN_VIP=PLAN_REGULAR">
+<org.eventb.core.prIdent name="PLAN_REGULAR" org.eventb.core.type="plan"/>
+<org.eventb.core.prIdent name="PLAN_VIP" org.eventb.core.type="plan"/>
+<org.eventb.core.prIdent name="plan" org.eventb.core.type="ℙ(plan)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="zoberservice={SERVICE_ZOBERY,SERVICE_ZOBERWHITE}">
+<org.eventb.core.prIdent name="SERVICE_ZOBERWHITE" org.eventb.core.type="zoberservice"/>
+<org.eventb.core.prIdent name="SERVICE_ZOBERY" org.eventb.core.type="zoberservice"/>
+<org.eventb.core.prIdent name="zoberservice" org.eventb.core.type="ℙ(zoberservice)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="newName∈name">
+<org.eventb.core.prIdent name="name" org.eventb.core.type="ℙ(name)"/>
+<org.eventb.core.prIdent name="newName" org.eventb.core.type="name"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="plan={PLAN_VIP,PLAN_REGULAR}">
 <org.eventb.core.prIdent name="PLAN_REGULAR" org.eventb.core.type="plan"/>
 <org.eventb.core.prIdent name="PLAN_VIP" org.eventb.core.type="plan"/>
 <org.eventb.core.prIdent name="plan" org.eventb.core.type="ℙ(plan)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬newClient∈dom(registered_email)">
+<org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
+<org.eventb.core.prIdent name="email" org.eventb.core.type="ℙ(email)"/>
+<org.eventb.core.prIdent name="newClient" org.eventb.core.type="clients"/>
+<org.eventb.core.prIdent name="registered_email" org.eventb.core.type="ℙ(clients×email)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬newClient∈dom(registered_plan)">
+<org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
+<org.eventb.core.prIdent name="newClient" org.eventb.core.type="clients"/>
+<org.eventb.core.prIdent name="plan" org.eventb.core.type="ℙ(plan)"/>
+<org.eventb.core.prIdent name="registered_plan" org.eventb.core.type="ℙ(clients×plan)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
@@ -466,12 +495,13 @@
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8,p9,p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12,p13"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -492,49 +522,77 @@
 <org.eventb.core.prIdent name="SERVICE_ZOBERY" org.eventb.core.type="zoberservice"/>
 <org.eventb.core.prIdent name="zoberservice" org.eventb.core.type="ℙ(zoberservice)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬newEmail∈ran(registered_email)">
-<org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
-<org.eventb.core.prIdent name="email" org.eventb.core.type="ℙ(email)"/>
-<org.eventb.core.prIdent name="newEmail" org.eventb.core.type="email"/>
-<org.eventb.core.prIdent name="registered_email" org.eventb.core.type="ℙ(clients×email)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="newClient∈clients">
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="newClient∈clients">
 <org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
 <org.eventb.core.prIdent name="newClient" org.eventb.core.type="clients"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬PLAN_VIP=PLAN_REGULAR">
-<org.eventb.core.prIdent name="PLAN_REGULAR" org.eventb.core.type="plan"/>
-<org.eventb.core.prIdent name="PLAN_VIP" org.eventb.core.type="plan"/>
-<org.eventb.core.prIdent name="plan" org.eventb.core.type="ℙ(plan)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="newEmail∈email∧newEmail∉ran(registered_email)">
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬newEmail∈ran(registered_email)">
 <org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
 <org.eventb.core.prIdent name="email" org.eventb.core.type="ℙ(email)"/>
 <org.eventb.core.prIdent name="newEmail" org.eventb.core.type="email"/>
 <org.eventb.core.prIdent name="registered_email" org.eventb.core.type="ℙ(clients×email)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="zoberservice={SERVICE_ZOBERY,SERVICE_ZOBERWHITE}">
-<org.eventb.core.prIdent name="SERVICE_ZOBERWHITE" org.eventb.core.type="zoberservice"/>
-<org.eventb.core.prIdent name="SERVICE_ZOBERY" org.eventb.core.type="zoberservice"/>
-<org.eventb.core.prIdent name="zoberservice" org.eventb.core.type="ℙ(zoberservice)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="newEmail∈email">
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="newEmail∈email∧newEmail∉ran(registered_email)">
+<org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
 <org.eventb.core.prIdent name="email" org.eventb.core.type="ℙ(email)"/>
 <org.eventb.core.prIdent name="newEmail" org.eventb.core.type="email"/>
+<org.eventb.core.prIdent name="registered_email" org.eventb.core.type="ℙ(clients×email)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="newName∈name">
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="newClient∈clients∧newClient∉dom(registered_email)∧newClient∉dom(registered_name)∧newClient∉dom(registered_plan)">
+<org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
+<org.eventb.core.prIdent name="email" org.eventb.core.type="ℙ(email)"/>
 <org.eventb.core.prIdent name="name" org.eventb.core.type="ℙ(name)"/>
-<org.eventb.core.prIdent name="newName" org.eventb.core.type="name"/>
+<org.eventb.core.prIdent name="newClient" org.eventb.core.type="clients"/>
+<org.eventb.core.prIdent name="plan" org.eventb.core.type="ℙ(plan)"/>
+<org.eventb.core.prIdent name="registered_email" org.eventb.core.type="ℙ(clients×email)"/>
+<org.eventb.core.prIdent name="registered_name" org.eventb.core.type="ℙ(clients×name)"/>
+<org.eventb.core.prIdent name="registered_plan" org.eventb.core.type="ℙ(clients×plan)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="newEmail∈email">
+<org.eventb.core.prIdent name="email" org.eventb.core.type="ℙ(email)"/>
+<org.eventb.core.prIdent name="newEmail" org.eventb.core.type="email"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(plan,{PLAN_VIP},{PLAN_REGULAR})">
 <org.eventb.core.prIdent name="PLAN_REGULAR" org.eventb.core.type="plan"/>
 <org.eventb.core.prIdent name="PLAN_VIP" org.eventb.core.type="plan"/>
 <org.eventb.core.prIdent name="plan" org.eventb.core.type="ℙ(plan)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬newClient∈dom(registered_name)">
+<org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
+<org.eventb.core.prIdent name="name" org.eventb.core.type="ℙ(name)"/>
+<org.eventb.core.prIdent name="newClient" org.eventb.core.type="clients"/>
+<org.eventb.core.prIdent name="registered_name" org.eventb.core.type="ℙ(clients×name)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬PLAN_VIP=PLAN_REGULAR">
+<org.eventb.core.prIdent name="PLAN_REGULAR" org.eventb.core.type="plan"/>
+<org.eventb.core.prIdent name="PLAN_VIP" org.eventb.core.type="plan"/>
+<org.eventb.core.prIdent name="plan" org.eventb.core.type="ℙ(plan)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="zoberservice={SERVICE_ZOBERY,SERVICE_ZOBERWHITE}">
+<org.eventb.core.prIdent name="SERVICE_ZOBERWHITE" org.eventb.core.type="zoberservice"/>
+<org.eventb.core.prIdent name="SERVICE_ZOBERY" org.eventb.core.type="zoberservice"/>
+<org.eventb.core.prIdent name="zoberservice" org.eventb.core.type="ℙ(zoberservice)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="newName∈name">
+<org.eventb.core.prIdent name="name" org.eventb.core.type="ℙ(name)"/>
+<org.eventb.core.prIdent name="newName" org.eventb.core.type="name"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="plan={PLAN_VIP,PLAN_REGULAR}">
 <org.eventb.core.prIdent name="PLAN_REGULAR" org.eventb.core.type="plan"/>
 <org.eventb.core.prIdent name="PLAN_VIP" org.eventb.core.type="plan"/>
 <org.eventb.core.prIdent name="plan" org.eventb.core.type="ℙ(plan)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬newClient∈dom(registered_email)">
+<org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
+<org.eventb.core.prIdent name="email" org.eventb.core.type="ℙ(email)"/>
+<org.eventb.core.prIdent name="newClient" org.eventb.core.type="clients"/>
+<org.eventb.core.prIdent name="registered_email" org.eventb.core.type="ℙ(clients×email)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬newClient∈dom(registered_plan)">
+<org.eventb.core.prIdent name="clients" org.eventb.core.type="ℙ(clients)"/>
+<org.eventb.core.prIdent name="newClient" org.eventb.core.type="clients"/>
+<org.eventb.core.prIdent name="plan" org.eventb.core.type="ℙ(plan)"/>
+<org.eventb.core.prIdent name="registered_plan" org.eventb.core.type="ℙ(clients×plan)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>

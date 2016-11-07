@@ -11,7 +11,7 @@
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="newClient"/>
 <org.eventb.core.parameter name=")" org.eventb.core.identifier="newEmail"/>
 <org.eventb.core.parameter name="*" org.eventb.core.identifier="newName"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="gClient" org.eventb.core.predicate="newClient ∈ clients"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="gClient" org.eventb.core.predicate="newClient ∈ clients ∧ newClient ∉ dom(registered_email) ∧ newClient ∉ dom(registered_name) ∧ newClient ∉ dom(registered_plan)"/>
 <org.eventb.core.guard name="," org.eventb.core.comment="Missing the guard to check if the email is already there" org.eventb.core.label="gEmail" org.eventb.core.predicate="newEmail ∈ email ∧ newEmail ∉ ran(registered_email) "/>
 <org.eventb.core.guard name="-" org.eventb.core.label="gName" org.eventb.core.predicate="newName ∈ name"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="registered_name≔registered_name ∪ {newClient ↦ newName}" org.eventb.core.label="act3"/>
