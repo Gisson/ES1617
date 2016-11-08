@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="4">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="cars" org.eventb.core.type="ℙ(cars)"/>
 <org.eventb.core.poIdentifier name="clients" org.eventb.core.type="ℙ(clients)"/>
 <org.eventb.core.poIdentifier name="drivers" org.eventb.core.type="ℙ(drivers)"/>
@@ -15,7 +15,7 @@
 <org.eventb.core.poIdentifier name="SERVICE_ZOBERWHITE" org.eventb.core.type="zoberservice"/>
 <org.eventb.core.poIdentifier name="SERVICE_ZOBERY" org.eventb.core.type="zoberservice"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Zober/ZoberContext.bpo|org.eventb.core.poFile#ZoberContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Zober/ZoberContext.bpo|org.eventb.core.poFile#ZoberContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(zoberservice,{SERVICE_ZOBERY},{SERVICE_ZOBERWHITE})" org.eventb.core.source="/Zober/ZoberContext.buc|org.eventb.core.contextFile#ZoberContext|org.eventb.core.axiom#4"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(plan,{PLAN_VIP},{PLAN_REGULAR})" org.eventb.core.source="/Zober/ZoberContext.buc|org.eventb.core.contextFile#ZoberContext|org.eventb.core.axiom#5"/>
 </org.eventb.core.poPredicateSet>
