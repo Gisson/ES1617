@@ -4,6 +4,7 @@
 <org.eventb.core.action name="'" org.eventb.core.assignment="zober_drivers ≔ ∅" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="drivers_names ≔ ∅" org.eventb.core.label="act2"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="drivers_licenses ≔ ∅" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="banned_drivers ≔ ∅" org.eventb.core.label="act4"/>
 </org.eventb.core.event>
 <org.eventb.core.seesContext name="(" org.eventb.core.target="Zober"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=")" org.eventb.core.identifier="zober_drivers"/>
@@ -23,5 +24,23 @@
 <org.eventb.core.action name="." org.eventb.core.assignment="zober_drivers ≔ zober_drivers ∪ {driver}" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="0" org.eventb.core.assignment="drivers_names ≔ drivers_names ∪ {driver ↦ name}" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="drivers_licenses ≔ drivers_licenses ∪ {driver ↦ license}" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="isnt_banned" org.eventb.core.predicate="driver ∉ banned_drivers"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="removeDriver">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="driver"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="is_driver" org.eventb.core.predicate="driver ∈ DRIVERS ∧ driver ∈ zober_drivers"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="zober_drivers ≔ zober_drivers ∖ {driver}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="drivers_names ≔ {driver} ⩤ drivers_names " org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="drivers_licenses ≔ {driver} ⩤ drivers_licenses" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="1" org.eventb.core.identifier="banned_drivers"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv4" org.eventb.core.predicate="banned_drivers ⊆ zober_drivers"/>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="banDriver">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="driver"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="is_driver" org.eventb.core.predicate="driver ∈ DRIVERS ∧ driver ∈ zober_drivers"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="zober_drivers ≔ zober_drivers ∖ {driver}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="drivers_names ≔ {driver} ⩤ drivers_names " org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="drivers_licenses ≔ {driver} ⩤ drivers_licenses" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="banned_drivers ≔ banned_drivers ∪ {driver}" org.eventb.core.label="act4"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

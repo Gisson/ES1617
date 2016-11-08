@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="4">
+<org.eventb.core.poFile org.eventb.core.poStamp="27">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="CARS" org.eventb.core.type="ℙ(CARS)"/>
 <org.eventb.core.poIdentifier name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
@@ -17,7 +17,7 @@
 <org.eventb.core.poPredicate name="ZOBERSERVICF" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.axiom#."/>
 <org.eventb.core.poPredicate name="ZOBERSERVICG" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.axiom#5"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="20">
 <org.eventb.core.poIdentifier name="car_drivers" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
 <org.eventb.core.poIdentifier name="car_owners" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
 <org.eventb.core.poIdentifier name="drivers_licenses" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
@@ -28,34 +28,34 @@
 <org.eventb.core.poPredicate name="drivers_licenseu" org.eventb.core.predicate="drivers_names∈zober_drivers → NAMES" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#-"/>
 <org.eventb.core.poPredicate name="drivers_licensev" org.eventb.core.predicate="drivers_licenses∈zober_drivers ↣ LICENSES" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#."/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="21">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#EVTALLHYPdrivers_licenset"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car_owners'∈zober_cars' ↔ (∅ ⦂ ℙ(DRIVERS))" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(CARS×DRIVERS))∈(∅ ⦂ ℙ(CARS)) ↔ (∅ ⦂ ℙ(DRIVERS))" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#."/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="21">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#EVTALLHYPdrivers_licenset"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car_drivers'∈zober_cars' ↔ (∅ ⦂ ℙ(DRIVERS))" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(CARS×DRIVERS))∈(∅ ⦂ ℙ(CARS)) ↔ (∅ ⦂ ℙ(DRIVERS))" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#\/"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#\/"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="21">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#EVTALLHYPdrivers_licenset"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂DRIVERS·x∈ran(car_owners')⇒dom(car_owners' ▷ {x})⊆dom(car_drivers' ▷ {x})" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂DRIVERS·x∈ran(∅ ⦂ ℙ(CARS×DRIVERS))⇒dom((∅ ⦂ ℙ(CARS×DRIVERS)) ▷ {x})⊆dom((∅ ⦂ ℙ(CARS×DRIVERS)) ▷ {x})" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#0"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/p1/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#0"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licenset" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licenset" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="20">
 <org.eventb.core.poIdentifier name="drivers_licenses'" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
 <org.eventb.core.poIdentifier name="drivers_names'" org.eventb.core.type="ℙ(DRIVERS×NAMES)"/>
 <org.eventb.core.poIdentifier name="zober_cars'" org.eventb.core.type="ℙ(CARS)"/>
@@ -63,8 +63,74 @@
 <org.eventb.core.poIdentifier name="car_owners'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
 <org.eventb.core.poIdentifier name="car_drivers'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licenset" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licenset" org.eventb.core.poStamp="4"/>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licenset" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licenset" org.eventb.core.poStamp="20"/>
+<org.eventb.core.poSequent name="addCar/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#EVTALLHYPdrivers_licenseu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car_owners∪{car ↦ owner}∈zober_cars ↔ zober_drivers" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poSequent#addCar\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addCar/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#EVTALLHYPdrivers_licenseu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car_drivers∪{car ↦ owner}∈zober_cars ↔ zober_drivers" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poSequent#addCar\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addCar/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#EVTALLHYPdrivers_licenseu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂DRIVERS·x∈ran(car_owners∪{car ↦ owner})⇒dom((car_owners∪{car ↦ owner}) ▷ {x})⊆dom((car_drivers∪{car ↦ owner}) ▷ {x})" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poSequent#addCar\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licenseu" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poIdentifier name="car" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="car_owners'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="owner" org.eventb.core.type="DRIVERS"/>
+<org.eventb.core.poIdentifier name="car_drivers'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licenseu" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licenseu" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="car∈CARS∧car∉zober_cars" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#1|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="owner∈DRIVERS" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#1|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="removeCar/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="27">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#EVTALLHYPdrivers_licensev"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{car} ⩤ car_owners∈zober_cars ↔ zober_drivers" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poSequent#removeCar\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="removeCar/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="27">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#EVTALLHYPdrivers_licensev"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{car} ⩤ car_drivers∈zober_cars ↔ zober_drivers" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poSequent#removeCar\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="removeCar/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="27">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#EVTALLHYPdrivers_licensev"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂DRIVERS·x∈ran({car} ⩤ car_owners)⇒dom({car} ⩤ car_owners ▷ {x})⊆dom({car} ⩤ car_drivers ▷ {x})" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poSequent#removeCar\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licensev" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="27">
+<org.eventb.core.poIdentifier name="car" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="car_owners'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="car_drivers'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licensev" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licensev" org.eventb.core.poStamp="27">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="car∈CARS∧car∈zober_cars" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#2|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/p1/Cars.bpo|org.eventb.core.poFile#Cars|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="20">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="zober_cars⊆CARS" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#-"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="car_owners∈zober_cars ↔ zober_drivers" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#."/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="car_drivers∈zober_cars ↔ zober_drivers" org.eventb.core.source="/p1/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#\/"/>
