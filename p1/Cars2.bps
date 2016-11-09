@@ -1,19 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="addCar/gOwner/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="addCar/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="addCar/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="addCar/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="removeCar/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="removeCar/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="removeCar/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="newDriver/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="newDriver/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="removeDriver/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="removeDriver/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="banDriver/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="banDriver/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="drivers_more_than_2/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="car_drivers_&lt;3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="car_drivers_&gt;1/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/drivers_more_than_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/car_drivers_&lt;3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/car_drivers_&gt;1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addCar/grdnum/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addCar/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addCar/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addCar/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addCar/drivers_more_than_2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addCar/car_drivers_&lt;3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addCar/car_drivers_&gt;1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addCar/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="removeCar/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="removeCar/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="removeCar/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="removeCar/drivers_more_than_2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="removeCar/car_drivers_&lt;3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="removeCar/car_drivers_&gt;1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="removeCar/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="newDriver/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="newDriver/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="removeDriver/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="removeDriver/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="removeDriver/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="removeDriver/drivers_more_than_2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="removeDriver/car_drivers_&lt;3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="removeDriver/car_drivers_&gt;1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="removeDriver/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="banDriver/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="banDriver/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="banDriver/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="banDriver/drivers_more_than_2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="banDriver/car_drivers_&lt;3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="banDriver/car_drivers_&gt;1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="banDriver/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="upgradeService/grd2/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="upgradeService/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="downgradeService/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="downgradeService/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

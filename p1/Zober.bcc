@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase">
 <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.axiom#." org.eventb.core.theorem="false"/>
 <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.axiom#5" org.eventb.core.theorem="false"/>
 <org.eventb.core.scCarrierSet name="CARS" org.eventb.core.source="/p1/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(CARS)"/>

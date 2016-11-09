@@ -364,8 +364,8 @@
 <org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
 <org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
@@ -697,8 +697,8 @@
 <org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
 <org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
