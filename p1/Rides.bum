@@ -1,5 +1,83 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase;ch.ethz.eventb.qualprob.qpConfig" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Cars3"/>
 <org.eventb.core.seesContext name="(" org.eventb.core.target="Zober"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="zober_clients"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="client_names"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="client_emails"/>
+<org.eventb.core.variable name="1" org.eventb.core.identifier="client_plans"/>
+<org.eventb.core.variable name="_SX-WsKaiEeaXM64u2TryKQ" org.eventb.core.identifier="zober_drivers"/>
+<org.eventb.core.variable name="_SX-WsaaiEeaXM64u2TryKQ" org.eventb.core.identifier="drivers_names"/>
+<org.eventb.core.variable name="_SX-9wKaiEeaXM64u2TryKQ" org.eventb.core.identifier="drivers_licenses"/>
+<org.eventb.core.variable name="_SX-9waaiEeaXM64u2TryKQ" org.eventb.core.identifier="banned_drivers"/>
+<org.eventb.core.variable name="_oUFZIKbYEeaXM64u2TryKQ" org.eventb.core.identifier="zober_cars"/>
+<org.eventb.core.variable name="_oUFZIabYEeaXM64u2TryKQ" org.eventb.core.identifier="car_owners"/>
+<org.eventb.core.variable name="_oUFZIqbYEeaXM64u2TryKQ" org.eventb.core.identifier="car_drivers"/>
+<org.eventb.core.variable name="_oUFZI6bYEeaXM64u2TryKQ" org.eventb.core.identifier="cars_service"/>
+<org.eventb.core.event name="_oUFZIqbYEeaXM64u2TryKR" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="zober_rides ≔ ∅" org.eventb.core.label="actd"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="rides_id ≔ ∅" org.eventb.core.label="acte"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="rides_service ≔ ∅" org.eventb.core.label="actf"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="rides_begin ≔ ∅" org.eventb.core.label="act10"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="rides_end ≔ ∅" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="rides_clients ≔ ∅" org.eventb.core.label="act12"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="rides_car ≔ ∅" org.eventb.core.label="act13"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_oUFZIqbYEeaXM64u2TryKS" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addCar">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="addCar"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_oUFZIqbYEeaXM64u2TryKT" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeCar">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeCar"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_oUFZIqbYEeaXM64u2TryKU" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="newClient">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="newClient"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_oUFZIqbYEeaXM64u2TryKV" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeClient">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeClient"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_oUFZIqbYEeaXM64u2TryKW" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="upgradePlan">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="upgradePlan"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_oUFZIqbYEeaXM64u2TryKX" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="downgradePlan">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="downgradePlan"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_oUFZIqbYEeaXM64u2TryKY" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="newDriver">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="newDriver"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_oUFZIqbYEeaXM64u2TryKZ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeDriver">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeDriver"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_oUFZIqbYEeaXM64u2TryK[" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="banDriver">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="banDriver"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_oUFZIqbYEeaXM64u2TryK\" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="upgradeService">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="upgradeService"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_oUFZIqbYEeaXM64u2TryK]" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="downgradeService">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="downgradeService"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_oUFZIqbYEeaXM64u2TryK^" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addDriverToCar">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="addDriverToCar"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_oUFZIqbYEeaXM64u2TryK_" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeDriverFromCar">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeDriverFromCar"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_oUFZIqbYEeaXM64u2TryK`" org.eventb.core.identifier="zober_rides"/>
+<org.eventb.core.variable name="_oUFZIqbYEeaXM64u2TryKa" org.eventb.core.identifier="rides_id"/>
+<org.eventb.core.variable name="_oUFZIqbYEeaXM64u2TryKb" org.eventb.core.identifier="rides_service"/>
+<org.eventb.core.variable name="_oUFZIqbYEeaXM64u2TryKc" org.eventb.core.identifier="rides_begin"/>
+<org.eventb.core.variable name="_oUFZIqbYEeaXM64u2TryKd" org.eventb.core.identifier="rides_end"/>
+<org.eventb.core.variable name="_oUFZIqbYEeaXM64u2TryKe" org.eventb.core.identifier="rides_clients"/>
+<org.eventb.core.invariant name="_oUFZIqbYEeaXM64u2TryKf" org.eventb.core.label="inv1" org.eventb.core.predicate="zober_rides ⊆ RIDES"/>
+<org.eventb.core.invariant name="_oUFZIqbYEeaXM64u2TryKg" org.eventb.core.label="inv2" org.eventb.core.predicate="rides_id ∈ zober_rides ⤔ ℕ"/>
+<org.eventb.core.invariant name="_oUFZIqbYEeaXM64u2TryKh" org.eventb.core.label="inv3" org.eventb.core.predicate="rides_service ∈ zober_rides ⤔ ZOBERSERVICE"/>
+<org.eventb.core.invariant name="_oUFZIqbYEeaXM64u2TryKi" org.eventb.core.label="inv4" org.eventb.core.predicate="rides_begin ∈ zober_rides ⤔ ℕ"/>
+<org.eventb.core.invariant name="_oUFZIqbYEeaXM64u2TryKj" org.eventb.core.label="inv5" org.eventb.core.predicate="rides_end ∈ zober_rides ⤔ ℕ "/>
+<org.eventb.core.invariant name="_oUFZIqbYEeaXM64u2TryKk" org.eventb.core.label="inv6" org.eventb.core.predicate="rides_clients ∈ zober_rides ↔ zober_clients"/>
+<org.eventb.core.invariant name="_oUFZIqbYEeaXM64u2TryKp" org.eventb.core.label="inv7" org.eventb.core.predicate="rides_car ∈ zober_rides ↔ zober_cars "/>
+<org.eventb.core.invariant name="_oUFZIqbYEeaXM64u2TryKl" org.eventb.core.label="unique_id" org.eventb.core.predicate="∀ rId1·rId1 ∈ ran(rides_id)  ⇒ card( rides_id ▷ {rId1}) = 0"/>
+<org.eventb.core.invariant name="_oUFZIqbYEeaXM64u2TryKn" org.eventb.core.label="wellformed_ride" org.eventb.core.predicate="∀ ride·ride ∈ zober_rides ⇒ rides_begin(ride) &lt; rides_end(ride)"/>
+<org.eventb.core.invariant name="_oUFZIqbYEeaXM64u2TryKm" org.eventb.core.label="ride_car_service" org.eventb.core.predicate="∀ ride·ride ∈ zober_rides ⇒ ran({ride} ◁ rides_service) = ran(ran({ride} ◁ rides_car) ◁ cars_service)"/>
+<org.eventb.core.variable name="_oUFZIqbYEeaXM64u2TryKo" org.eventb.core.identifier="rides_car"/>
+<org.eventb.core.invariant name="_oUFZIqbYEeaXM64u2TryKq" org.eventb.core.comment="incomplete" org.eventb.core.label="no_overlaps" org.eventb.core.predicate="∀ car,car_ride,car_ride2· car ∈ zober_cars ∧ car_ride ∈ rides_car ▷ {car} ∧ car_ride2 ∈ rides_car ▷ {car} ∧ ¬(car_ride = car_ride2) ∧ 1 &lt; car_ride2  ⇒ rides_end(car_ride) &lt; rides_begin(car_ride2) "/>
 </org.eventb.core.machineFile>

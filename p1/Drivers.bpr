@@ -114,7 +114,7 @@
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="newDriver/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="DRIVERS,LICENSES,NAMES,PLAN,ZOBERSERVICE">
+<org.eventb.core.prProof name="newDriver/inv2/INV" org.eventb.core.confidence="100" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="DRIVERS,LICENSES,NAMES,PLAN,ZOBERSERVICE" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
@@ -134,9 +134,7 @@
 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p15"/>
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p16"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p11"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p1,p7,p8,p9,p10,p12,p13">
-<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-</org.eventb.core.prRule>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="100" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p13,p1,p7,p8,p10,p9,p2,p12"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -174,10 +172,10 @@
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="license∉ran(drivers_licenses)"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="driver∈DRIVERS∧driver∉zober_drivers"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="newDriver/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="DRIVERS,LICENSES,NAMES,PLAN,ZOBERSERVICE">
 <org.eventb.core.lang name="L"/>
@@ -495,9 +493,9 @@
 <org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
 <org.eventb.core.prIdent name="banned_drivers" org.eventb.core.type="ℙ(DRIVERS)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="removeDriver/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L"/>
@@ -579,9 +577,9 @@
 <org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
 <org.eventb.core.prIdent name="banned_drivers" org.eventb.core.type="ℙ(DRIVERS)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="removeDriver/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L"/>
@@ -737,9 +735,9 @@
 <org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
 <org.eventb.core.prIdent name="banned_drivers" org.eventb.core.type="ℙ(DRIVERS)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="banDriver/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L"/>
@@ -816,9 +814,9 @@
 <org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
 <org.eventb.core.prIdent name="banned_drivers" org.eventb.core.type="ℙ(DRIVERS)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="banDriver/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="DRIVERS">
 <org.eventb.core.lang name="L"/>
