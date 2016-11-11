@@ -21,7 +21,8 @@
 <org.eventb.core.action name="*" org.eventb.core.assignment="ride_services ≔ ∅" org.eventb.core.label="act16"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="ride_begin ≔ ∅" org.eventb.core.label="act17"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="ride_end ≔ ∅" org.eventb.core.label="act18"/>
-<org.eventb.core.action name="-" org.eventb.core.assignment="completed_rides ≔ ∅" org.eventb.core.label="act19"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="completed_rides :∈ ∅" org.eventb.core.label="act19"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="temp_car :∈ CARS" org.eventb.core.label="act20"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="newClient">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="newClient"/>
@@ -145,8 +146,8 @@
 <org.eventb.core.action name="9" org.eventb.core.assignment="temp_car :∣ (car_services(temp_car') = srv ∧ (∀r2 · r2 ∈ dom(ride_cars ▷ {temp_car'})&#13;&#10;&#9;&#9;⇒ (ride_end(r2) &lt; begin ∨ ride_begin(r2) &gt; end)))" org.eventb.core.comment="unlikely to be correct. no further ideas. need to find a car with srv and compatible times to join to ride_cars" org.eventb.core.label="act6"/>
 <org.eventb.core.action name=";" org.eventb.core.assignment="ride_cars ≔ ride_cars ∪ {ride ↦ temp_car}" org.eventb.core.label="act7"/>
 </org.eventb.core.event>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="m" org.eventb.core.comment="for newRide event" org.eventb.core.identifier="temp_car"/>
-<org.eventb.core.invariant name="n" org.eventb.core.comment="for newRide event" org.eventb.core.label="inv14" org.eventb.core.predicate="temp_car ∈ CARS"/>
+<org.eventb.core.variable name="m" org.eventb.core.comment="for newRide event" org.eventb.core.identifier="temp_car"/>
+<org.eventb.core.invariant name="n" org.eventb.core.comment="for newRide event" org.eventb.core.label="inv14" org.eventb.core.predicate="temp_car ∈ zober_cars"/>
 <org.eventb.core.event name="o" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="cancelRide">
 <org.eventb.core.guard name="'" org.eventb.core.comment="(requirement 37)" org.eventb.core.label="is_pending" org.eventb.core.predicate="ride ∈ zober_rides ∖ dom(completed_rides)"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="ride"/>
