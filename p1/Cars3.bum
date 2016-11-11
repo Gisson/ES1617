@@ -28,6 +28,7 @@
 <org.eventb.core.action name="_7uzsd6bYEeaXM64u2TryKQ" org.eventb.core.assignment="car_owners ≔ car_owners ∪ {car ↦ owner}" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="_7uzseKbYEeaXM64u2TryKQ" org.eventb.core.assignment="car_drivers ≔ car_drivers ∪ {car ↦ owner}" org.eventb.core.label="act3"/>
 <org.eventb.core.action name="_7uzseabYEeaXM64u2TryKQ" org.eventb.core.assignment="cars_service ≔ cars_service ∪ {car ↦ ZOBER_Y}" org.eventb.core.label="act4"/>
+<org.eventb.core.guard name="_7uzseabYEeaXM64u2TryKR" org.eventb.core.label="driver_too_much_cars" org.eventb.core.predicate="card(car_drivers ▷ {owner})≤1"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_SX-WsaaiEeaXM64u2TryKT" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="removeCar">
 <org.eventb.core.parameter name="_E_Yf8KbZEeaXM64u2TryKQ" org.eventb.core.identifier="car"/>
