@@ -904,4 +904,1016 @@
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="CLIENTS,NAMES">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PLAN,{REGULAR},{VIP}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(∅ ⦂ ℙ(CLIENTS×NAMES))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ZOBER_Y=ZOBER_WHITE">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬REGULAR=VIP">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="PLAN={REGULAR,VIP}">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="CLIENTS,EMAILS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PLAN,{REGULAR},{VIP}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(∅ ⦂ ℙ(CLIENTS×EMAILS))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ZOBER_Y=ZOBER_WHITE">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬REGULAR=VIP">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="PLAN={REGULAR,VIP}">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="CLIENTS,PLAN">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PLAN,{REGULAR},{VIP}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(∅ ⦂ ℙ(CLIENTS×PLAN))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ZOBER_Y=ZOBER_WHITE">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬REGULAR=VIP">
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="PLAN={REGULAR,VIP}">
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})">
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="newClient/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="CLIENTS,NAMES">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PLAN,{REGULAR},{VIP}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p6,p7"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="client" org.eventb.core.type="CLIENTS"/>
+<org.eventb.core.prIdent name="client_names" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.prIdent name="name" org.eventb.core.type="NAMES"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(client_names)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬ZOBER_Y=ZOBER_WHITE">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬REGULAR=VIP">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬email∈ran(client_emails)">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.prIdent name="email" org.eventb.core.type="EMAILS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="PLAN={REGULAR,VIP}">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="email∉ran(client_emails)">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.prIdent name="email" org.eventb.core.type="EMAILS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(client_names∪{client ↦ name})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="newClient/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="CLIENTS,EMAILS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PLAN,{REGULAR},{VIP}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p6,p7"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="client" org.eventb.core.type="CLIENTS"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.prIdent name="email" org.eventb.core.type="EMAILS"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(client_emails∪{client ↦ email})"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬ZOBER_Y=ZOBER_WHITE">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬REGULAR=VIP">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬email∈ran(client_emails)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(client_emails)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="PLAN={REGULAR,VIP}">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="email∉ran(client_emails)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="newClient/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="CLIENTS,PLAN">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PLAN,{REGULAR},{VIP}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p6,p7"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="client" org.eventb.core.type="CLIENTS"/>
+<org.eventb.core.prIdent name="client_plans" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(client_plans∪{client ↦ REGULAR})"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(client_plans)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬ZOBER_Y=ZOBER_WHITE">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬REGULAR=VIP">
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬email∈ran(client_emails)">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.prIdent name="email" org.eventb.core.type="EMAILS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="PLAN={REGULAR,VIP}">
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})">
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="email∉ran(client_emails)">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.prIdent name="email" org.eventb.core.type="EMAILS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="removeClient/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PLAN,{REGULAR},{VIP}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="p8,p9,p10" org.eventb.core.prInfHyps="p7"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="zober_clients⊆CLIENTS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="zober_clients" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="finite(client_names)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="client_names" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="⊤∧⊤∧⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬ZOBER_Y=ZOBER_WHITE">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬REGULAR=VIP">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="finite(client_plans)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="client_plans" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite(client_emails)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="finite(client_emails)∧finite(client_names)∧finite(client_plans)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.prIdent name="client_names" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.prIdent name="client_plans" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PLAN={REGULAR,VIP}">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="removeClient/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PLAN,{REGULAR},{VIP}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="p8,p9,p10" org.eventb.core.prInfHyps="p7"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="zober_clients⊆CLIENTS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="zober_clients" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="finite(client_names)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="client_names" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="⊤∧⊤∧⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬ZOBER_Y=ZOBER_WHITE">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬REGULAR=VIP">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="finite(client_plans)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="client_plans" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite(client_emails)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="finite(client_emails)∧finite(client_names)∧finite(client_plans)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.prIdent name="client_names" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.prIdent name="client_plans" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PLAN={REGULAR,VIP}">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="removeClient/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PLAN,{REGULAR},{VIP}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="p8,p9,p10" org.eventb.core.prInfHyps="p7"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="zober_clients⊆CLIENTS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="zober_clients" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="finite(client_names)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="client_names" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="⊤∧⊤∧⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬ZOBER_Y=ZOBER_WHITE">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬REGULAR=VIP">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="finite(client_plans)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="client_plans" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite(client_emails)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="finite(client_emails)∧finite(client_names)∧finite(client_plans)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.prIdent name="client_names" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.prIdent name="client_plans" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PLAN={REGULAR,VIP}">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="upgradePlan/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="CLIENTS,PLAN">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PLAN,{REGULAR},{VIP}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with client_plans(client)=REGULAR" org.eventb.core.prHyps="p0">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p5,p6"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="client" org.eventb.core.type="CLIENTS"/>
+<org.eventb.core.prIdent name="client_plans" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="zober_clients⊆CLIENTS">
+<org.eventb.core.prIdent name="zober_clients" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="PLAN={client_plans(client),VIP}">
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="client_plans(client)=REGULAR"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ZOBER_Y=ZOBER_WHITE">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬REGULAR=VIP">
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="PLAN={REGULAR,VIP}">
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})">
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬client_plans(client)=VIP">
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="downgradePlan/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="CLIENTS,PLAN">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PLAN,{REGULAR},{VIP}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with client_plans(client)=VIP" org.eventb.core.prHyps="p0">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p5,p6"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="client" org.eventb.core.type="CLIENTS"/>
+<org.eventb.core.prIdent name="client_plans" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="zober_clients⊆CLIENTS">
+<org.eventb.core.prIdent name="zober_clients" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="PLAN={REGULAR,client_plans(client)}">
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="client_plans(client)=VIP"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ZOBER_Y=ZOBER_WHITE">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬REGULAR=VIP">
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="PLAN={REGULAR,VIP}">
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬REGULAR=client_plans(client)">
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})">
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="CLIENTS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PLAN,{REGULAR},{VIP}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(∅ ⦂ ℙ(CLIENTS))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ZOBER_Y=ZOBER_WHITE">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬REGULAR=VIP">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="PLAN={REGULAR,VIP}">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="newClient/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="CLIENTS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PLAN,{REGULAR},{VIP}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p6,p7"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="client" org.eventb.core.type="CLIENTS"/>
+<org.eventb.core.prIdent name="zober_clients" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(zober_clients∪{client})"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬ZOBER_Y=ZOBER_WHITE">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬REGULAR=VIP">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬email∈ran(client_emails)">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.prIdent name="email" org.eventb.core.type="EMAILS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(zober_clients)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="PLAN={REGULAR,VIP}">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="email∉ran(client_emails)">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.prIdent name="email" org.eventb.core.type="EMAILS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="removeClient/inv8/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PLAN,{REGULAR},{VIP}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="p8,p9,p10" org.eventb.core.prInfHyps="p7"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="zober_clients⊆CLIENTS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="zober_clients" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="finite(client_names)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="client_names" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="⊤∧⊤∧⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬ZOBER_Y=ZOBER_WHITE">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬REGULAR=VIP">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="finite(client_plans)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="client_plans" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite(client_emails)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="finite(client_emails)∧finite(client_names)∧finite(client_plans)">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.prIdent name="client_names" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.prIdent name="client_plans" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PLAN={REGULAR,VIP}">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})">
+<org.eventb.core.prIdent name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.prIdent name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.prIdent name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
 </org.eventb.core.prFile>
