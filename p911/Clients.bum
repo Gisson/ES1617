@@ -33,7 +33,6 @@
 <org.eventb.core.action name="*" org.eventb.core.assignment="client_names ≔ {client} ⩤ client_names" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="client_emails ≔ {client} ⩤ client_emails" org.eventb.core.label="act3"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="client_plans ≔ {client} ⩤ client_plans" org.eventb.core.label="act4"/>
-<org.eventb.core.guard name="-" org.eventb.core.label="grd1" org.eventb.core.predicate="finite(client_emails) ∧ finite(client_names) ∧ finite(client_plans)"/>
 </org.eventb.core.event>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="1" org.eventb.core.identifier="client_plans"/>
 <org.eventb.core.invariant name="2" org.eventb.core.label="inv4" org.eventb.core.predicate="client_plans ∈ zober_clients → PLAN"/>
@@ -42,7 +41,6 @@
 <org.eventb.core.guard name="(" org.eventb.core.label="client_exists" org.eventb.core.predicate="client ∈ zober_clients"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="is_regular" org.eventb.core.predicate="client_plans(client) = REGULAR"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="client_plans(client) ≔ VIP" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="finite(client_plans)"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="downgradePlan">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="client"/>
@@ -50,8 +48,4 @@
 <org.eventb.core.guard name=")" org.eventb.core.label="is_vip" org.eventb.core.predicate="client_plans(client) = VIP"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="client_plans(client) ≔ REGULAR" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name="5" org.eventb.core.label="inv5" org.eventb.core.predicate="finite(client_names)"/>
-<org.eventb.core.invariant name="6" org.eventb.core.label="inv6" org.eventb.core.predicate="finite(client_emails)"/>
-<org.eventb.core.invariant name="7" org.eventb.core.label="inv7" org.eventb.core.predicate="finite(client_plans)"/>
-<org.eventb.core.invariant name="8" org.eventb.core.label="inv8" org.eventb.core.predicate="finite(zober_clients)"/>
 </org.eventb.core.machineFile>
