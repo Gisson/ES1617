@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Rides"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="ZoberSharing"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="zober_clients"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="+" org.eventb.core.identifier="client_names"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="," org.eventb.core.identifier="client_emails"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="3" org.eventb.core.identifier="client_plans"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="4" org.eventb.core.identifier="zober_drivers"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="5" org.eventb.core.identifier="drivers_names"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="6" org.eventb.core.identifier="drivers_licenses"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="7" org.eventb.core.identifier="banned_drivers"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="8" org.eventb.core.identifier="zober_cars"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="9" org.eventb.core.identifier="car_owners"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=":" org.eventb.core.identifier="car_drivers"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="I" org.eventb.core.identifier="car_services"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="b" org.eventb.core.identifier="zober_rides"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="X" org.eventb.core.identifier="ride_cars"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="Y" org.eventb.core.identifier="ride_clients"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="Z" org.eventb.core.identifier="ride_services"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="[" org.eventb.core.identifier="ride_begin"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="\" org.eventb.core.identifier="ride_end"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="g" org.eventb.core.identifier="completed_rides"/>
+<org.eventb.core.event name="h" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="i" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="newClient">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="newClient"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="j" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeClient">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeClient"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="k" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="upgradePlan">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="upgradePlan"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="l" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="downgradePlan">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="downgradePlan"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="m" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="newDriver">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="newDriver"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="n" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeDriver">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeDriver"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="o" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="banDriver">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="banDriver"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="p" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addCar">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="addCar"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeCar">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeCar"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="r" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addDriverToCar">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="addDriverToCar"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="s" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeDriverFromCar">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeDriverFromCar"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="t" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="upgradeService">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="upgradeService"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="u" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="downgradeService">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="downgradeService"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="v" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="newRide">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="newRide"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="w" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="cancelRide">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="cancelRide"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="x" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="completeRide">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="completeRide"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="y" org.eventb.core.label="inv1" org.eventb.core.predicate="⊤"/>
+</org.eventb.core.machineFile>

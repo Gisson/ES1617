@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poIdentifier name="CARS" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.poIdentifier name="LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.poIdentifier name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.poIdentifier name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.poIdentifier name="RIDES" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.poIdentifier name="VIP" org.eventb.core.type="PLAN"/>
+<org.eventb.core.poIdentifier name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.poIdentifier name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.poPredicate name="ZOBERSERVICF" org.eventb.core.predicate="partition(ZOBERSERVICE,{ZOBER_Y},{ZOBER_WHITE})" org.eventb.core.source="/p910/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="ZOBERSERVICG" org.eventb.core.predicate="partition(PLAN,{REGULAR},{VIP})" org.eventb.core.source="/p910/Zober.buc|org.eventb.core.contextFile#Zober|org.eventb.core.axiom#5"/>
+<org.eventb.core.poIdentifier name="r1" org.eventb.core.type="RIDES"/>
+<org.eventb.core.poIdentifier name="r2" org.eventb.core.type="RIDES"/>
+<org.eventb.core.poPredicate name="ZOBERSERVICH" org.eventb.core.predicate="r1∈RIDES∧r2∈RIDES∧r1≠r2" org.eventb.core.source="/p910/ZoberSharing.buc|org.eventb.core.contextFile#ZoberSharing|org.eventb.core.axiom#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poIdentifier name="banned_drivers" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="car_drivers" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="car_owners" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="car_services" org.eventb.core.type="ℙ(CARS×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="client_emails" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.poIdentifier name="client_names" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.poIdentifier name="client_plans" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.poIdentifier name="completed_rides" org.eventb.core.type="ℙ(RIDES×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="drivers_licenses" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
+<org.eventb.core.poIdentifier name="drivers_names" org.eventb.core.type="ℙ(DRIVERS×NAMES)"/>
+<org.eventb.core.poIdentifier name="ride_begin" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="ride_cars" org.eventb.core.type="ℙ(RIDES×CARS)"/>
+<org.eventb.core.poIdentifier name="ride_clients" org.eventb.core.type="ℙ(RIDES×CLIENTS)"/>
+<org.eventb.core.poIdentifier name="ride_end" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="ride_services" org.eventb.core.type="ℙ(RIDES×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="zober_cars" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="zober_clients" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="zober_drivers" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="zober_rides" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poPredicate name="drivers_licenset" org.eventb.core.predicate="zober_clients⊆CLIENTS" org.eventb.core.source="/p910/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="drivers_licenseu" org.eventb.core.predicate="client_names∈zober_clients → NAMES" org.eventb.core.source="/p910/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="drivers_licensev" org.eventb.core.predicate="client_emails∈zober_clients ↣ EMAILS" org.eventb.core.source="/p910/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="drivers_licensew" org.eventb.core.predicate="client_plans∈zober_clients → PLAN" org.eventb.core.source="/p910/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="drivers_licensex" org.eventb.core.predicate="zober_drivers⊆DRIVERS" org.eventb.core.source="/p910/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="drivers_licensey" org.eventb.core.predicate="drivers_names∈zober_drivers → NAMES" org.eventb.core.source="/p910/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="drivers_licensez" org.eventb.core.predicate="drivers_licenses∈zober_drivers ↣ LICENSES" org.eventb.core.source="/p910/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="drivers_license{" org.eventb.core.predicate="banned_drivers⊆DRIVERS" org.eventb.core.source="/p910/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#3"/>
+<org.eventb.core.poPredicate name="drivers_license|" org.eventb.core.predicate="zober_drivers∩banned_drivers=(∅ ⦂ ℙ(DRIVERS))" org.eventb.core.source="/p910/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#@"/>
+<org.eventb.core.poPredicate name="drivers_license}" org.eventb.core.predicate="zober_cars⊆CARS" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="drivers_license~" org.eventb.core.predicate="car_owners∈zober_cars → zober_drivers" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="drivers_licensf'" org.eventb.core.predicate="car_drivers∈zober_cars  zober_drivers" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="drivers_licensf(" org.eventb.core.predicate="car_owners⊆car_drivers" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="drivers_licensf)" org.eventb.core.predicate="∀c⦂CARS·c∈zober_cars⇒1≤card({c} ◁ car_drivers)∧card({c} ◁ car_drivers)≤3" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="drivers_licensf*" org.eventb.core.predicate="∀d⦂DRIVERS·d∈ran(car_drivers)⇒card(car_drivers ▷ {d})≤2" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="drivers_licensf+" org.eventb.core.predicate="banned_drivers∩zober_drivers=(∅ ⦂ ℙ(DRIVERS))" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#L"/>
+<org.eventb.core.poPredicate name="drivers_licensf," org.eventb.core.predicate="∀d⦂DRIVERS·d∈banned_drivers⇒car_owners ▷ {d}=(∅ ⦂ ℙ(CARS×DRIVERS))" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#C"/>
+<org.eventb.core.poPredicate name="drivers_licensf-" org.eventb.core.predicate="car_services∈zober_cars → ZOBERSERVICE" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#H"/>
+<org.eventb.core.poPredicate name="drivers_licensf." org.eventb.core.predicate="zober_rides⊆RIDES" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#]"/>
+<org.eventb.core.poPredicate name="drivers_licensf/" org.eventb.core.predicate="ride_cars∈zober_rides → zober_cars" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#^"/>
+<org.eventb.core.poPredicate name="drivers_licensf0" org.eventb.core.predicate="ride_clients∈zober_rides → zober_clients" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#_"/>
+<org.eventb.core.poPredicate name="drivers_licensf1" org.eventb.core.predicate="ride_services∈zober_rides → ZOBERSERVICE" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#`"/>
+<org.eventb.core.poPredicate name="drivers_licensf2" org.eventb.core.predicate="ride_begin∈zober_rides → ℕ" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#a"/>
+<org.eventb.core.poPredicate name="drivers_licensf3" org.eventb.core.predicate="ride_end∈zober_rides → ℕ" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#c"/>
+<org.eventb.core.poPredicate name="drivers_licensf4" org.eventb.core.predicate="completed_rides∈zober_rides → {1 ‥ 5}" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#k"/>
+<org.eventb.core.poPredicate name="drivers_licensf5" org.eventb.core.predicate="∀r⦂RIDES·r∈zober_rides ∖ dom(completed_rides)⇒ride_services(r)=car_services(ride_cars(r))" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#d"/>
+<org.eventb.core.poPredicate name="drivers_licensf6" org.eventb.core.predicate="∀r⦂RIDES·r∈zober_rides⇒ride_begin(r)&lt;ride_end(r)" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#e"/>
+<org.eventb.core.poPredicate name="drivers_licensf7" org.eventb.core.predicate="∀c⦂CARS·c∈zober_cars∧c∈ran(ride_cars)⇒(∀r1⦂RIDES,r2⦂RIDES·r1∈zober_rides∧{r1 ↦ c}⊆ride_cars∧r2∈zober_rides∧{r2 ↦ c}⊆ride_cars∧r1≠r2⇒ride_begin(r1)&gt;ride_end(r2)∨ride_begin(r2)&gt;ride_end(r1))" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#f"/>
+<org.eventb.core.poPredicate name="drivers_licensf8" org.eventb.core.predicate="∀c⦂CLIENTS·c∈zober_clients∧c∈ran(ride_clients)⇒(∀r1⦂RIDES,r2⦂RIDES·r1∈zober_rides∧{r1 ↦ c}⊆ride_clients∧r2∈zober_rides∧{r2 ↦ c}⊆ride_clients∧r1≠r2⇒ride_begin(r1)&gt;ride_end(r2)∨ride_begin(r2)&gt;ride_end(r1))" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#h"/>
+<org.eventb.core.poPredicate name="drivers_licensf9" org.eventb.core.predicate="∀c⦂CLIENTS·c∈zober_clients∧client_plans(c)=REGULAR⇒card(dom(ride_clients ▷ {c}) ∖ dom(completed_rides))≤2" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#i"/>
+<org.eventb.core.poPredicate name="drivers_licensf:" org.eventb.core.predicate="∀c⦂CLIENTS·c∈zober_clients∧client_plans(c)=VIP⇒(∀r⦂RIDES·r∈dom(ride_clients ▷ {c}) ∖ dom(completed_rides)⇒ride_services(r)=ZOBER_WHITE)" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#j"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licenset" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poIdentifier name="zober_clients'" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="client_emails'" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.poIdentifier name="drivers_licenses'" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
+<org.eventb.core.poIdentifier name="ride_end'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="drivers_names'" org.eventb.core.type="ℙ(DRIVERS×NAMES)"/>
+<org.eventb.core.poIdentifier name="ride_services'" org.eventb.core.type="ℙ(RIDES×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="zober_cars'" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="ride_cars'" org.eventb.core.type="ℙ(RIDES×CARS)"/>
+<org.eventb.core.poIdentifier name="zober_drivers'" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="banned_drivers'" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="car_owners'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="ride_clients'" org.eventb.core.type="ℙ(RIDES×CLIENTS)"/>
+<org.eventb.core.poIdentifier name="zober_rides'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="client_plans'" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.poIdentifier name="car_services'" org.eventb.core.type="ℙ(CARS×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="ride_begin'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="car_drivers'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="completed_rides'" org.eventb.core.type="ℙ(RIDES×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="client_names'" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licenset" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licenset" org.eventb.core.poStamp="3"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licenseu" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="zober_clients'" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="client_emails'" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.poIdentifier name="name" org.eventb.core.type="NAMES"/>
+<org.eventb.core.poIdentifier name="client_plans'" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.poIdentifier name="email" org.eventb.core.type="EMAILS"/>
+<org.eventb.core.poIdentifier name="client_names'" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.poIdentifier name="client" org.eventb.core.type="CLIENTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licenseu" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licenseu" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="client∈CLIENTS ∖ zober_clients" org.eventb.core.source="/p910/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#\/|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="name∈NAMES" org.eventb.core.source="/p910/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#\/|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="email∈EMAILS" org.eventb.core.source="/p910/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#\/|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="email∉ran(client_emails)" org.eventb.core.source="/p910/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#\/|org.eventb.core.guard#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licensev" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poIdentifier name="zober_clients'" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="client_emails'" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.poIdentifier name="ride_end'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="ride_services'" org.eventb.core.type="ℙ(RIDES×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="ride_cars'" org.eventb.core.type="ℙ(RIDES×CARS)"/>
+<org.eventb.core.poIdentifier name="zober_rides'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="ride_clients'" org.eventb.core.type="ℙ(RIDES×CLIENTS)"/>
+<org.eventb.core.poIdentifier name="client_plans'" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.poIdentifier name="ride_begin'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="completed_rides'" org.eventb.core.type="ℙ(RIDES×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="client_names'" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.poIdentifier name="client" org.eventb.core.type="CLIENTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licensev" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licensev" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="client∈zober_clients" org.eventb.core.source="/p910/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#0|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀r⦂RIDES·r∈zober_rides∧ride_clients(r)=client⇒r∈dom(completed_rides)" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#L|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licensew" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="client_plans'" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.poIdentifier name="client" org.eventb.core.type="CLIENTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licensew" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licensew" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="client∈zober_clients" org.eventb.core.source="/p910/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#3|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="client_plans(client)=REGULAR" org.eventb.core.source="/p910/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#3|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="dom(ride_clients ▷ {client})∩dom(ride_services ▷ {ZOBER_Y})=(∅ ⦂ ℙ(RIDES))" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#M|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licensex" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="client_plans'" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.poIdentifier name="client" org.eventb.core.type="CLIENTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licensex" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licensex" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="client∈zober_clients" org.eventb.core.source="/p910/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#4|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="client_plans(client)=VIP" org.eventb.core.source="/p910/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#4|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="card(dom(ride_clients ▷ {client}) ∖ dom(completed_rides))≤2" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#N|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licensey" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="drivers_licenses'" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
+<org.eventb.core.poIdentifier name="drivers_names'" org.eventb.core.type="ℙ(DRIVERS×NAMES)"/>
+<org.eventb.core.poIdentifier name="driver" org.eventb.core.type="DRIVERS"/>
+<org.eventb.core.poIdentifier name="name" org.eventb.core.type="NAMES"/>
+<org.eventb.core.poIdentifier name="zober_drivers'" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="license" org.eventb.core.type="LICENSES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licensey" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licensey" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="driver∈DRIVERS ∖ zober_drivers" org.eventb.core.source="/p910/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.event#\/|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="name∈NAMES" org.eventb.core.source="/p910/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.event#\/|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="license∈LICENSES" org.eventb.core.source="/p910/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.event#\/|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="license∉ran(drivers_licenses)" org.eventb.core.source="/p910/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.event#\/|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="driver∉banned_drivers" org.eventb.core.source="/p910/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.event#\/|org.eventb.core.guard#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licensez" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poIdentifier name="drivers_licenses'" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
+<org.eventb.core.poIdentifier name="ride_end'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="drivers_names'" org.eventb.core.type="ℙ(DRIVERS×NAMES)"/>
+<org.eventb.core.poIdentifier name="driver" org.eventb.core.type="DRIVERS"/>
+<org.eventb.core.poIdentifier name="ride_services'" org.eventb.core.type="ℙ(RIDES×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="zober_cars'" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="ride_cars'" org.eventb.core.type="ℙ(RIDES×CARS)"/>
+<org.eventb.core.poIdentifier name="zober_drivers'" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="zober_rides'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="car_owners'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="ride_clients'" org.eventb.core.type="ℙ(RIDES×CLIENTS)"/>
+<org.eventb.core.poIdentifier name="car_services'" org.eventb.core.type="ℙ(CARS×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="ride_begin'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="car_drivers'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="completed_rides'" org.eventb.core.type="ℙ(RIDES×ℙ(ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licensez" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licensez" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="driver∈zober_drivers" org.eventb.core.source="/p910/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.event#0|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀c⦂CARS·c∈dom(car_owners ▷ {driver})⇒dom(ride_cars ▷ {c})∩(zober_rides ∖ dom(completed_rides))=(∅ ⦂ ℙ(RIDES))" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#P|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_license{" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="drivers_licenses'" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
+<org.eventb.core.poIdentifier name="ride_end'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="drivers_names'" org.eventb.core.type="ℙ(DRIVERS×NAMES)"/>
+<org.eventb.core.poIdentifier name="driver" org.eventb.core.type="DRIVERS"/>
+<org.eventb.core.poIdentifier name="ride_services'" org.eventb.core.type="ℙ(RIDES×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="zober_cars'" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="ride_cars'" org.eventb.core.type="ℙ(RIDES×CARS)"/>
+<org.eventb.core.poIdentifier name="zober_drivers'" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="banned_drivers'" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="zober_rides'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="car_owners'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="ride_clients'" org.eventb.core.type="ℙ(RIDES×CLIENTS)"/>
+<org.eventb.core.poIdentifier name="car_services'" org.eventb.core.type="ℙ(CARS×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="ride_begin'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="car_drivers'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="completed_rides'" org.eventb.core.type="ℙ(RIDES×ℙ(ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_license{" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_license{" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="driver∈zober_drivers" org.eventb.core.source="/p910/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.event#1|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_license|" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="car" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="zober_cars'" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="car_owners'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="car_services'" org.eventb.core.type="ℙ(CARS×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="owner" org.eventb.core.type="DRIVERS"/>
+<org.eventb.core.poIdentifier name="car_drivers'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_license|" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_license\|" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="car∈CARS ∖ zober_cars" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#D|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="owner∈zober_drivers" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#D|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀x⦂CARS×DRIVERS,y⦂CARS×DRIVERS·x∈car_drivers ▷ {owner}∧y∈car_drivers ▷ {owner}⇒x=y" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#D|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_license}" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="ride_end'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="car" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="ride_services'" org.eventb.core.type="ℙ(RIDES×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="zober_cars'" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="ride_cars'" org.eventb.core.type="ℙ(RIDES×CARS)"/>
+<org.eventb.core.poIdentifier name="zober_rides'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="car_owners'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="ride_clients'" org.eventb.core.type="ℙ(RIDES×CLIENTS)"/>
+<org.eventb.core.poIdentifier name="car_services'" org.eventb.core.type="ℙ(CARS×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="ride_begin'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="car_drivers'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="completed_rides'" org.eventb.core.type="ℙ(RIDES×ℙ(ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_license}" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_license}" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="car∈zober_cars" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#E|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="dom(ride_cars ▷ {car})∩(zober_rides ∖ dom(completed_rides))=(∅ ⦂ ℙ(RIDES))" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#S|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_license~" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="car" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="driver" org.eventb.core.type="DRIVERS"/>
+<org.eventb.core.poIdentifier name="car_drivers'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_license~" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_license~" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="car∈zober_cars" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#F|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="driver∈zober_drivers" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#F|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="{car} ◁ car_drivers ▷ {driver}=(∅ ⦂ ℙ(CARS×DRIVERS))" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#F|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀x⦂CARS×DRIVERS,y⦂CARS×DRIVERS·x∈car_drivers ▷ {driver}∧y∈car_drivers ▷ {driver}⇒x=y" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#F|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀x⦂CARS×DRIVERS,y⦂CARS×DRIVERS,z⦂CARS×DRIVERS·x∈{car} ◁ car_drivers∧y∈{car} ◁ car_drivers∧z∈{car} ◁ car_drivers⇒x=y∨x=z∨y=z" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#F|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licensf'" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="ride_end'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="car" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="driver" org.eventb.core.type="DRIVERS"/>
+<org.eventb.core.poIdentifier name="ride_services'" org.eventb.core.type="ℙ(RIDES×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="zober_cars'" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="ride_cars'" org.eventb.core.type="ℙ(RIDES×CARS)"/>
+<org.eventb.core.poIdentifier name="zober_rides'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="car_owners'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="ride_clients'" org.eventb.core.type="ℙ(RIDES×CLIENTS)"/>
+<org.eventb.core.poIdentifier name="car_services'" org.eventb.core.type="ℙ(CARS×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="ride_begin'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="car_drivers'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="completed_rides'" org.eventb.core.type="ℙ(RIDES×ℙ(ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licensf'" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licensf'" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="{car} ◁ car_drivers ▷ {driver}≠(∅ ⦂ ℙ(CARS×DRIVERS))" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#G|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="(zober_rides ∖ dom(completed_rides))∩dom(ride_cars ▷ dom(car_owners ▷ {driver}))=(∅ ⦂ ℙ(RIDES))" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#U|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licensf(" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="car" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="car_services'" org.eventb.core.type="ℙ(CARS×ZOBERSERVICE)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licensf(" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licensf(" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="car∈zober_cars" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#J|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="car_services(car)=ZOBER_Y" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#J|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="dom(ride_cars ▷ {car})∩(zober_rides ∖ dom(completed_rides))=(∅ ⦂ ℙ(RIDES))" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#V|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licensf)" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="car" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="car_services'" org.eventb.core.type="ℙ(CARS×ZOBERSERVICE)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licensf)" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licensf)" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="car∈zober_cars" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#K|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="car_services(car)=ZOBER_WHITE" org.eventb.core.source="/p910/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.event#K|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="dom(ride_cars ▷ {car})∩(zober_rides ∖ dom(completed_rides))=(∅ ⦂ ℙ(RIDES))" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#W|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licensf*" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="ride_end'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="ride_services'" org.eventb.core.type="ℙ(RIDES×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="end" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ride_cars'" org.eventb.core.type="ℙ(RIDES×CARS)"/>
+<org.eventb.core.poIdentifier name="begin" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="zober_rides'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="ride_clients'" org.eventb.core.type="ℙ(RIDES×CLIENTS)"/>
+<org.eventb.core.poIdentifier name="ride" org.eventb.core.type="RIDES"/>
+<org.eventb.core.poIdentifier name="srv" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.poIdentifier name="ride_begin'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="client" org.eventb.core.type="CLIENTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licensf*" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licensf*" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ride∈RIDES ∖ zober_rides" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#l|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="srv∈ZOBERSERVICE" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#l|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="client∈zober_clients" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#l|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="begin∈ℕ∧end∈ℕ∧end&gt;begin" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#l|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="client_plans(client)=REGULAR⇒(∀r1⦂RIDES,r2⦂RIDES·r1∈zober_rides∧r2∈zober_rides⇒ride_clients(r1)=ride_clients(r2))" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#l|org.eventb.core.guard#0"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="client_plans(client)=VIP⇒srv=ZOBER_WHITE" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#l|org.eventb.core.guard#3"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="∀r⦂RIDES·r∈dom(ride_clients ▷ {client})⇒ride_end(r)&lt;begin∨ride_begin(r)&gt;end" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#l|org.eventb.core.guard#1"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="∃c⦂CARS·c∈zober_cars∧car_services(c)=srv⇒(∀r⦂RIDES·r∈dom(ride_cars ▷ {c})⇒ride_end(r)&lt;begin∨ride_begin(r)&gt;end)" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#l|org.eventb.core.guard#2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licensf+" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="ride_end'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="ride_services'" org.eventb.core.type="ℙ(RIDES×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="ride_cars'" org.eventb.core.type="ℙ(RIDES×CARS)"/>
+<org.eventb.core.poIdentifier name="zober_rides'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="ride_clients'" org.eventb.core.type="ℙ(RIDES×CLIENTS)"/>
+<org.eventb.core.poIdentifier name="ride" org.eventb.core.type="RIDES"/>
+<org.eventb.core.poIdentifier name="ride_begin'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licensf+" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licensf+" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ride∈zober_rides ∖ dom(completed_rides)" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#o|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdrivers_licensf," org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="grade" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="ride" org.eventb.core.type="RIDES"/>
+<org.eventb.core.poIdentifier name="completed_rides'" org.eventb.core.type="ℙ(RIDES×ℙ(ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdrivers_licensf," org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#EVTIDENTdrivers_licensf," org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ride∈zober_rides ∖ dom(completed_rides)" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#p|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="grade∈{1 ‥ 5}" org.eventb.core.source="/p910/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#p|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/p910/NewIdeas.bpo|org.eventb.core.poFile#NewIdeas|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="⊤" org.eventb.core.source="/p910/NewIdeas.bum|org.eventb.core.machineFile#NewIdeas|org.eventb.core.invariant#y"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="zober_cars ≔ ∅" org.eventb.core.comment="(requirement 25)" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="internal2" org.eventb.core.assignment="car_owners ≔ ∅" org.eventb.core.label="act10"/>
+<org.eventb.core.action name="internal3" org.eventb.core.assignment="car_drivers ≔ ∅" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="internal4" org.eventb.core.assignment="car_services ≔ ∅" org.eventb.core.label="act12"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Zober"/>
+<org.eventb.core.refinesMachine name=")" org.eventb.core.target="Drivers"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="zober_clients"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="+" org.eventb.core.identifier="client_names"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="," org.eventb.core.identifier="client_emails"/>
+<org.eventb.core.invariant name="-" org.eventb.core.comment="(requirement 18)" org.eventb.core.label="inv1" org.eventb.core.predicate="zober_cars ⊆ CARS"/>
+<org.eventb.core.invariant name="." org.eventb.core.comment="(requirement 19 - only one &quot;pair&quot; per car)" org.eventb.core.label="inv2" org.eventb.core.predicate="car_owners ∈ zober_cars → zober_drivers"/>
+<org.eventb.core.invariant name="/" org.eventb.core.comment="(requirement 22)" org.eventb.core.label="inv3" org.eventb.core.predicate="car_drivers ∈ zober_cars  zober_drivers"/>
+<org.eventb.core.invariant name="0" org.eventb.core.comment="(requirement 21)" org.eventb.core.label="inv4" org.eventb.core.predicate="car_owners ⊆ car_drivers   "/>
+<org.eventb.core.invariant name="1" org.eventb.core.comment="(requirement 20)" org.eventb.core.label="inv5" org.eventb.core.predicate="∀ c · c ∈ zober_cars ⇒ 1 ≤ card({c} ◁ car_drivers) ∧ card({c} ◁ car_drivers) ≤ 3"/>
+<org.eventb.core.invariant name="2" org.eventb.core.comment="(requirement 23)" org.eventb.core.label="inv6" org.eventb.core.predicate="∀ d · d ∈ ran(car_drivers) ⇒ card(car_drivers ▷ {d}) ≤ 2"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="3" org.eventb.core.identifier="client_plans"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="4" org.eventb.core.identifier="zober_drivers"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="5" org.eventb.core.identifier="drivers_names"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="6" org.eventb.core.identifier="drivers_licenses"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="7" org.eventb.core.identifier="banned_drivers"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="8" org.eventb.core.identifier="zober_cars"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="9" org.eventb.core.identifier="car_owners"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=":" org.eventb.core.identifier="car_drivers"/>
+<org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="newClient">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="newClient"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeClient">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeClient"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="upgradePlan">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="upgradePlan"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="downgradePlan">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="downgradePlan"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="newDriver">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="newDriver"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeDriver">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeDriver"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="zober_cars ≔ zober_cars ∖ dom(car_owners ▷ {driver})" org.eventb.core.label="act4"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="car_drivers ≔ (dom(car_owners ▷ {driver}) ⩤ car_drivers) ⩥ {driver}" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="car_owners ≔ dom(car_owners ▷ {driver}) ⩤ car_owners" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="car_services ≔ dom(car_owners ▷ {driver}) ⩤ car_services" org.eventb.core.label="act7"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="banDriver">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="banDriver"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="zober_cars ≔ zober_cars ∖ dom(car_owners ▷ {driver})" org.eventb.core.comment="(requirement 38 - start)" org.eventb.core.label="act5"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="car_drivers ≔ (dom(car_owners ▷ {driver}) ⩤ car_drivers) ⩥ {driver}" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="car_owners ≔ dom(car_owners ▷ {driver}) ⩤ car_owners" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="car_services ≔ dom(car_owners ▷ {driver}) ⩤ car_services" org.eventb.core.label="act8"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="L" org.eventb.core.label="inv7" org.eventb.core.predicate="banned_drivers ∩ zober_drivers = ∅"/>
+<org.eventb.core.invariant name="C" org.eventb.core.comment="(requirement 38 - no banned driver owns a registered car)" org.eventb.core.label="inv8" org.eventb.core.predicate="∀ d · d ∈ banned_drivers ⇒ (car_owners ▷ {d}) = ∅"/>
+<org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addCar">
+<org.eventb.core.guard name="'" org.eventb.core.label="is_new_car" org.eventb.core.predicate="car ∈ CARS ∖ zober_cars"/>
+<org.eventb.core.guard name="," org.eventb.core.label="owner_registered" org.eventb.core.predicate="owner ∈ zober_drivers"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="car"/>
+<org.eventb.core.parameter name="+" org.eventb.core.identifier="owner"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="zober_cars ≔ zober_cars ∪ {car}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="car_drivers ≔ car_drivers ∪ {car ↦ owner}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="car_owners ≔ car_owners ∪ {car ↦ owner}" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="owner_not_maxed" org.eventb.core.predicate="∀ x, y · (x ∈ (car_drivers ▷ {owner}) ∧ y ∈ (car_drivers ▷ {owner})) ⇒ x = y"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="car_services ≔ car_services ∪ {car ↦ ZOBER_Y}" org.eventb.core.comment="(requirement 26)" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="removeCar">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="car"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="(requirement 27)" org.eventb.core.label="is_registered" org.eventb.core.predicate="car ∈ zober_cars"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="zober_cars ≔ zober_cars ∖ {car}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="car_drivers ≔ {car} ⩤ car_drivers" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="car_owners ≔ {car} ⩤ car_owners" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="car_services ≔ {car} ⩤ car_services" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addDriverToCar">
+<org.eventb.core.guard name="'" org.eventb.core.label="car_registered" org.eventb.core.predicate="car ∈ zober_cars"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="driver"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="car"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="(requirement 28)" org.eventb.core.label="driver_registered" org.eventb.core.predicate="driver ∈ zober_drivers"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="not_paired" org.eventb.core.predicate="({car} ◁ car_drivers) ▷ {driver} = ∅"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="driver_not_maxed" org.eventb.core.predicate="∀ x, y · (x ∈ (car_drivers ▷ {driver}) ∧ y ∈ (car_drivers ▷ {driver})) ⇒ x = y"/>
+<org.eventb.core.guard name="," org.eventb.core.label="car_not_maxed" org.eventb.core.predicate="∀ x, y, z · (x ∈ ({car} ◁ car_drivers) ∧ y ∈ ({car} ◁ car_drivers) ∧ z ∈ ({car} ◁ car_drivers)) ⇒ (x = y ∨ x = z ∨ y = z)"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="car_drivers ≔ car_drivers ∪ {car ↦ driver}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="removeDriverFromCar">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="driver"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="car"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="(requirement 28)" org.eventb.core.label="are_paired" org.eventb.core.predicate="({car} ◁ car_drivers) ▷ {driver} ≠ ∅"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="car_drivers ≔ (dom(car_owners ▷ {driver}) ⩤ car_drivers) ∖ {car ↦ driver}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="zober_cars ≔ zober_cars ∖ dom(car_owners ▷ {driver})" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="car_owners ≔ car_owners ⩥ {driver}" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="car_services ≔ dom(car_owners ▷ {driver}) ⩤ car_services" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="H" org.eventb.core.comment="(requirement 24)" org.eventb.core.label="inv9" org.eventb.core.predicate="car_services ∈ zober_cars → ZOBERSERVICE"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="I" org.eventb.core.identifier="car_services"/>
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="upgradeService">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="car"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="is_registered" org.eventb.core.predicate="car ∈ zober_cars"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="is_y" org.eventb.core.predicate="car_services(car) = ZOBER_Y"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="car_services(car) ≔ ZOBER_WHITE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="downgradeService">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="car"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="is_registered" org.eventb.core.predicate="car ∈ zober_cars"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="is_white" org.eventb.core.predicate="car_services(car) = ZOBER_WHITE"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="car_services(car) ≔ ZOBER_Y" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>
